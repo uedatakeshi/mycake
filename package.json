@@ -1,0 +1,12 @@
+{
+  "name": "mycake",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cs": "Vendor/bin/phpcs --standard=CakePHP app/Controller/ app/Model/"
+  },
+  "author": "",
+  "license": "ISC"
+}

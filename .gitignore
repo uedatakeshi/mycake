@@ -1,9 +1,10 @@
-#/app/tmp/*
-#/app/webroot/files
-#/app/Config/core.php
+/app/tmp/*
+/app/webroot/files
+/app/Config/core.php
 /app/Config/database.php
 /Plugin/*
 /Vendor/*
+npm-debug.log
 
 # IDE and editor specific files #
 #################################

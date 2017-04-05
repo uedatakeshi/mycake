@@ -13,6 +13,14 @@
  * @since         CakePHP(tm) v 0.10.8.2117
  */
 
+// Composer の autoload を読み込み
+require ROOT . DS . 'Vendor' . DS . 'autoload.php';
+
+// CakePHP のオートローダーをいったん削除し、Composer より先に評価されるように先頭に追加する
+// http://goo.gl/kKVJO7 を参照
+spl_autoload_unregister(array('App', 'load'));
+spl_autoload_register(array('App', 'load'), true, true);
+
 // Setup a 'default' cache configuration for use in the application.
 Cache::config('default', array('engine' => 'File'));
 
@@ -41,6 +49,11 @@ Cache::config('default', array('engine' => 'File'));
  * ));
  */
 
+App::build(array(
+    'Vendor' => array(ROOT . DS . 'Vendor' . DS),
+    'Plugin' => array(ROOT . DS . 'Plugin' . DS)
+));
+
 /**
  * Custom Inflector rules can be set to correctly pluralize or singularize table, model, controller names or whatever other
  * string is passed to the inflection functions
@@ -57,6 +70,8 @@ Cache::config('default', array('engine' => 'File'));
  * CakePlugin::loadAll(); // Loads all plugins at once
  * CakePlugin::load('DebugKit'); // Loads a single plugin named DebugKit
  */
+
+CakePlugin::loadAll(); // Loads all plugins at once
 
 /**
  * You can attach event listeners to the request lifecycle as Dispatcher Filter . By default CakePHP bundles two filters:
