@@ -24,6 +24,9 @@ spl_autoload_register(array('App', 'load'), true, true);
 // Setup a 'default' cache configuration for use in the application.
 Cache::config('default', array('engine' => 'File'));
 
+// 自分が定義する定数
+config('const');
+
 /**
  * The settings below can be used to set additional paths to models, views and controllers.
  *

@@ -23,4 +23,8 @@ App::uses('Controller', 'Controller');
  */
 class AppController extends Controller {
     var $components = array( 'DebugKit.Toolbar');
+
+    // 共通して利用する配列の定義
+    // echo $this->sex[1]; として使う
+    var $sex = array('男', '女');
 }
