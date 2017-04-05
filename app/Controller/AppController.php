@@ -22,9 +22,10 @@ App::uses('Controller', 'Controller');
  * @link		http://book.cakephp.org/2.0/en/controllers.html#the-app-controller
  */
 class AppController extends Controller {
-    var $components = array( 'DebugKit.Toolbar');
 
-    // 共通して利用する配列の定義
-    // echo $this->sex[1]; として使う
-    var $sex = array('男', '女');
+	public $components = array('DebugKit.Toolbar');
+
+	// 共通して利用する配列の定義
+	// echo $this->sex[1]; として使う
+	public $sex = array('男', '女');
 }
