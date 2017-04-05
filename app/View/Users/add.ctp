@@ -1,14 +1,15 @@
 <div class="users form">
-<?php echo $this->Form->create('User'); ?>
+<?php echo $this->Form->create('User', array('type' => 'file')); ?>
 	<fieldset>
 		<legend><?php echo __('Add User'); ?></legend>
 	<?php
+        echo $this->Form->hidden('webroot', array('value' => $this->webroot));
 		echo $this->Form->input('username');
 		echo $this->Form->input('password');
 		echo $this->Form->input('name');
 		echo $this->Form->input('email');
-		echo $this->Form->input('photo');
-		echo $this->Form->input('photo_dir');
+        echo $this->Form->input('User.photo', array('type' => 'file'));
+        echo $this->Form->input('User.photo_dir', array('type' => 'hidden'));
 		echo $this->Form->input('role');
 		echo $this->Form->input('status');
 	?>
