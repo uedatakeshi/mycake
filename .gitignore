@@ -1,0 +1,28 @@
+#/app/tmp/*
+#/app/webroot/files
+#/app/Config/core.php
+/app/Config/database.php
+/Plugin/*
+/Vendor/*
+
+# IDE and editor specific files #
+#################################
+/nbproject
+.idea
+/.project
+/.buildpath
+/.settings/
+*.mo
+*.un~
+*.bak
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
