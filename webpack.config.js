@@ -1,4 +1,5 @@
 var path = require('path');
+var webpack = require('webpack');
 
 module.exports = {
 
@@ -12,5 +13,12 @@ module.exports = {
     path: path.resolve(__dirname, 'app/webroot/js'),
     //出力先のファイル名
     filename: '[name].js'
-  }
+  },
+  plugins: [
+        //JavaScriptを圧縮する
+        new webpack.optimize.UglifyJsPlugin({sourceMap: true})
+  ],
+
+    //出力するsource mapのスタイル
+  devtool: '#source-map'
 };
