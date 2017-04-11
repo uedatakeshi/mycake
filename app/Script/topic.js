@@ -1,4 +1,8 @@
-$(document).ready(function() {
+(function() {
+
+  var $ = require("jquery");
+  var mag = require('magnific-popup');
+
     var myPopup = {
         handleClick: function(key) {
             $.magnificPopup.open({
@@ -59,5 +63,4 @@ $(document).ready(function() {
     $(document).on('click', '.del_ok', function(){
         myPopup.okClick();
     });
-});
-
+})();

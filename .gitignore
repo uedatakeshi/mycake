@@ -5,6 +5,7 @@
 /Plugin/*
 /Vendor/*
 npm-debug.log
+/node_modules/*
 
 # IDE and editor specific files #
 #################################
